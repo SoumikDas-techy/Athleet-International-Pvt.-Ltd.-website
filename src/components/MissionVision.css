@@ -1,0 +1,80 @@
+/* MISSION / VISION */
+.mission-vision {
+  background: var(--off-white);
+}
+
+.mv-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.mv-card {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 48px;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 4px solid var(--gold);
+  box-shadow: 0 4px 30px rgba(10, 27, 61, 0.07);
+}
+
+.mv-card-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 32px;
+  text-transform: uppercase;
+  color: var(--navy);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.mv-card-icon {
+  width: 48px;
+  height: 48px;
+  background: var(--gold);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+.mv-card p {
+  font-size: 16px;
+  color: #5a6480;
+  line-height: 1.8;
+}
+
+.mv-card-watermark {
+  position: absolute;
+  bottom: -20px;
+  right: -10px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 120px;
+  font-weight: 900;
+  color: var(--off-white);
+  line-height: 1;
+  user-select: none;
+}
+
+@media (max-width: 768px) {
+  .mv-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mv-card {
+    padding: 32px;
+  }
+
+  .mv-card-label {
+    font-size: 24px;
+  }
+
+  .mv-card-watermark {
+    font-size: 80px;
+  }
+}

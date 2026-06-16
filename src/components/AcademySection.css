@@ -1,0 +1,162 @@
+/* ACADEMY */
+.academy-section {
+  background: var(--navy);
+}
+
+.academy-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+.academy-intro {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.8;
+  margin-bottom: 32px;
+}
+
+.academy-age-groups {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.age-group-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 24px;
+  transition: background 0.2s;
+}
+
+.age-group-card:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.age-group-range {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--gold);
+  margin-bottom: 6px;
+}
+
+.age-group-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.age-group-desc {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.5;
+}
+
+.academy-delivers {
+  margin-bottom: 32px;
+}
+
+.delivers-title {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+
+.delivers-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.deliver-item {
+  background: rgba(245, 166, 35, 0.08);
+  border: 1px solid rgba(245, 166, 35, 0.25);
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+}
+
+.deliver-icon {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.deliver-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.4;
+}
+
+.academy-value-boxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.value-box {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 28px;
+  border-top: 3px solid var(--gold);
+}
+
+.value-box.youths-box {
+  border-top-color: var(--gold);
+}
+
+.value-box.society-box {
+  border-top-color: #6cabdd;
+}
+
+.value-box-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+
+.value-box.society-box .value-box-label {
+  color: #6cabdd;
+}
+
+.value-box-list {
+  list-style: none;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.8;
+}
+
+.value-box-list li {
+  margin-bottom: 4px;
+}
+
+@media (max-width: 768px) {
+  .academy-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .academy-age-groups {
+    grid-template-columns: 1fr;
+  }
+
+  .delivers-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .academy-value-boxes {
+    grid-template-columns: 1fr;
+  }
+}

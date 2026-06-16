@@ -1,0 +1,170 @@
+/* HERO */
+.hero {
+  height: 100vh;
+  min-height: 700px;
+  position: relative;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 40%, var(--blue) 100%);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  margin-top: 70px;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url('https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=1600&q=80')
+    center/cover;
+  opacity: 0.12;
+}
+
+.hero-diagonal {
+  position: absolute;
+  right: -5%;
+  top: 0;
+  bottom: 0;
+  width: 55%;
+  background: var(--blue);
+  clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+  opacity: 0.5;
+}
+
+.hero-athletes {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 54%;
+  overflow: hidden;
+}
+
+.hero-athletes-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.7;
+  clip-path: polygon(18% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.hero-athletes-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, var(--navy) 0%, transparent 40%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 0 5%;
+  max-width: 650px;
+}
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(245, 166, 35, 0.15);
+  border: 1px solid rgba(245, 166, 35, 0.4);
+  color: var(--gold);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 7px 16px;
+  border-radius: 30px;
+  margin-bottom: 28px;
+}
+
+.hero-eyebrow::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--gold);
+  border-radius: 50%;
+}
+
+.hero-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: clamp(52px, 7vw, 88px);
+  line-height: 0.92;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 24px;
+}
+
+.hero-title .accent {
+  color: var(--gold);
+  display: block;
+}
+
+.hero-tagline {
+  font-size: 18px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.6;
+  margin-bottom: 40px;
+  max-width: 480px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.hero-stats {
+  margin-top: 64px;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.hero-stat-item {
+  text-align: left;
+}
+
+.hero-stat-num {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 40px;
+  color: var(--gold);
+  line-height: 1;
+}
+
+.hero-stat-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 80vh;
+    min-height: 500px;
+  }
+
+  .hero-athletes {
+    width: 100%;
+    opacity: 0.3;
+  }
+
+  .hero-diagonal {
+    opacity: 0.3;
+  }
+
+  .hero-content {
+    padding: 0 4%;
+  }
+
+  .hero-stat-num {
+    font-size: 28px;
+  }
+
+  .hero-stats {
+    gap: 20px;
+  }
+}
