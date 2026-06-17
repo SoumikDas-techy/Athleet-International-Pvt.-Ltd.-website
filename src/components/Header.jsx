@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css';
 
 const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -11,15 +13,21 @@ const Header = () => {
   };
 
   const handleNavClick = (sectionId) => {
+    setMenuOpen(false);
     setTimeout(() => {
       scrollToSection(sectionId);
     }, 0);
   };
 
+  const handleLinkClick = () => {
+    setMenuOpen(false);
+  };
+
   return (
     <nav className="navbar">
+      {/* Logo - unchanged */}
       <div className="nav-logo">
-        <Link to="/" className="nav-logo-link">
+        <Link to="/" className="nav-logo-link" onClick={handleLinkClick}>
           <div className="nav-logo-mark">A</div>
           <div className="nav-logo-text">
             Athleet International
@@ -27,16 +35,45 @@ const Header = () => {
           </div>
         </Link>
       </div>
-      <ul className="nav-links">
-        <li><Link to="/">About</Link></li>
-        <li><Link to="/uksc">UKSC</Link></li>
-        <li><Link to="/ajsdp">AJSDP</Link></li>
-        <li><Link to="/academy">Academy</Link></li>
-        <li><Link to="/mcfs">MCFS</Link></li>
-        <li><a href="#consulting" onClick={() => handleNavClick('consulting')}>Consulting</a></li>
-        <li><a href="#leadership" onClick={() => handleNavClick('leadership')}>Leadership</a></li>
+
+      {/* Hamburger - only shows on mobile */}
+      <button
+        className={`hamburger ${menuOpen ? 'open' : ''}`}
+        onClick={() => setMenuOpen(!menuOpen)}
+        aria-label="Toggle menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      {/* Nav Links */}
+      <ul className={`nav-links ${menuOpen ? 'active' : ''}`}>
+        <li><Link to="/" onClick={handleLinkClick}>About</Link></li>
+        <li><Link to="/uksc" onClick={handleLinkClick}>UKSC</Link></li>
+        <li><Link to="/ajsdp" onClick={handleLinkClick}>AJSDP</Link></li>
+        <li><Link to="/academy" onClick={handleLinkClick}>Academy</Link></li>
+        <li><Link to="/mcfs" onClick={handleLinkClick}>MCFS</Link></li>
+        <li>
+          <a href="#consulting" onClick={() => handleNavClick('consulting')}>
+            Consulting
+          </a>
+        </li>
+        <li>
+          <a href="#leadership" onClick={() => handleNavClick('leadership')}>
+            Leadership
+          </a>
+        </li>
       </ul>
-      <a href="#contact" onClick={() => handleNavClick('contact')} className="nav-cta">Contact Us</a>
+
+      {/* CTA Button - unchanged */}
+      <a
+        href="#contact"
+        onClick={() => handleNavClick('contact')}
+        className="nav-cta"
+      >
+        Contact Us
+      </a>
     </nav>
   );
 };
