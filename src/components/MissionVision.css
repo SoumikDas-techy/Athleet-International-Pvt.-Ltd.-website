@@ -77,4 +77,10 @@
   .mv-card-watermark {
     font-size: 80px;
   }
+  .mv-card-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+}
 }

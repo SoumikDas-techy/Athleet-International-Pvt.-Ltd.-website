@@ -1,4 +1,5 @@
 import React from 'react';
+import { Mail, Phone } from 'lucide-react';
 import './ContactCTA.css';
 
 const ContactCTA = () => {
@@ -16,12 +17,12 @@ const ContactCTA = () => {
         </p>
         <div className="cta-contact-grid">
           <div className="contact-item">
-            <div className="contact-icon">📧</div>
+            <div className="contact-icon"><Mail size={28} strokeWidth={1.8} /></div>
             <div className="contact-label">Email Us</div>
             <div className="contact-value">Info@athleetinternationalsports.com</div>
           </div>
           <div className="contact-item">
-            <div className="contact-icon">📞</div>
+            <div className="contact-icon"><Phone size={28} strokeWidth={1.8} /></div>
             <div className="contact-label">Call Us</div>
             <div className="contact-value">+91 70448 62111</div>
           </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { GraduationCap, ClipboardList, Trophy, Users } from 'lucide-react';
 import './AcademySection.css';
 
 const AcademySection = () => {
@@ -26,10 +27,10 @@ const AcademySection = () => {
   ];
 
   const deliverables = [
-    { icon: '🎓', label: 'Structured Coaching Methodology' },
-    { icon: '📋', label: 'Individual Development Plans (IDP)' },
-    { icon: '🏆', label: 'Regular Match & Tournament Exposure' },
-    { icon: '👨‍👩‍👧', label: 'Parent Engagement Framework' },
+    { icon: <GraduationCap size={28} strokeWidth={1.8} />, label: 'Structured Coaching Methodology' },
+    { icon: <ClipboardList size={28} strokeWidth={1.8} />, label: 'Individual Development Plans (IDP)' },
+    { icon: <Trophy size={28} strokeWidth={1.8} />, label: 'Regular Match & Tournament Exposure' },
+    { icon: <Users size={28} strokeWidth={1.8} />, label: 'Parent Engagement Framework' },
   ];
 
   return (

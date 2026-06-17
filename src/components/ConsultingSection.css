@@ -108,4 +108,17 @@
   .consulting-content {
     padding: 32px;
   }
+  .consulting-service-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+
+.consulting-arrow {
+  display: inline-flex;
+  align-items: center;
+  color: var(--gold);
+}
 }

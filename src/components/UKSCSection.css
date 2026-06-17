@@ -187,4 +187,10 @@
   .uksc-team-col:last-child {
     border-bottom: none;
   }
+  .inline-icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 6px;
+  color: var(--gold);
+}
 }

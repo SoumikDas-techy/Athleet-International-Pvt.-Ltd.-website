@@ -1,4 +1,5 @@
 import React from 'react';
+import { Star, Microscope, Laptop, Building, BookOpen } from 'lucide-react';
 import './DevelopmentModel.css';
 
 const DevelopmentModel = () => {
@@ -56,11 +57,11 @@ const DevelopmentModel = () => {
   ];
 
   const bottomCards = [
-    { icon: '⭐', title: 'Quality Coaching' },
-    { icon: '🔬', title: 'Sports Science & Medicine' },
-    { icon: '💻', title: 'Data & Technology' },
-    { icon: '🏟️', title: 'Infrastructure & Events' },
-    { icon: '📚', title: 'Education & Life Skills' },
+    { icon: <Star size={20} strokeWidth={2} />, title: 'Quality Coaching' },
+    { icon: <Microscope size={20} strokeWidth={2} />, title: 'Sports Science & Medicine' },
+    { icon: <Laptop size={20} strokeWidth={2} />, title: 'Data & Technology' },
+    { icon: <Building size={20} strokeWidth={2} />, title: 'Infrastructure & Events' },
+    { icon: <BookOpen size={20} strokeWidth={2} />, title: 'Education & Life Skills' },
   ];
 
   return (
@@ -88,7 +89,10 @@ const DevelopmentModel = () => {
       <div className="model-bottom">
         {bottomCards.map((card, index) => (
           <div key={index} className="model-bottom-card">
-            <div className="model-bottom-card-title">{card.icon} {card.title}</div>
+            <div className="model-bottom-card-title">
+              <span className="model-bottom-icon">{card.icon}</span>
+              {card.title}
+            </div>
           </div>
         ))}
       </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Calendar, CircleDot } from 'lucide-react';
 import './UKSCSection.css';
 
 const UKSCSection = () => {
@@ -51,7 +52,8 @@ const UKSCSection = () => {
             <span className="uksc-badge">Women's Team</span>
           </div>
           <p className="uksc-established">
-            📅 Established: 14th April 2024 &nbsp;|&nbsp; For The Youth, By The Youth
+            <Calendar size={16} strokeWidth={2} className="inline-icon" />
+            Established: 14th April 2024 &nbsp;|&nbsp; For The Youth, By The Youth
           </p>
           <p className="uksc-description">
             United Kolkata Sports Club was started to create a structured pathway for young footballers
@@ -74,7 +76,10 @@ const UKSCSection = () => {
           </div>
           <div className="uksc-team-row">
             <div className="uksc-team-col">
-              <div className="uksc-team-label">⚽ Men's Key Signings</div>
+              <div className="uksc-team-label">
+                <CircleDot size={16} strokeWidth={2} className="inline-icon" />
+                Men's Key Signings
+              </div>
               <div className="players-container">
                 {menPlayers.map((player, index) => (
                   <span key={index} className="player-tag">
@@ -84,7 +89,10 @@ const UKSCSection = () => {
               </div>
             </div>
             <div className="uksc-team-col">
-              <div className="uksc-team-label">⚽ Women's Key Signings</div>
+              <div className="uksc-team-label">
+                <CircleDot size={16} strokeWidth={2} className="inline-icon" />
+                Women's Key Signings
+              </div>
               <div className="players-container">
                 {womenPlayers.map((player, index) => (
                   <span key={index} className="player-tag">

@@ -207,4 +207,17 @@
   .value-grid {
     grid-template-columns: 1fr;
   }
+  .fitness-param-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+}
+
+.benefit-check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+}
 }

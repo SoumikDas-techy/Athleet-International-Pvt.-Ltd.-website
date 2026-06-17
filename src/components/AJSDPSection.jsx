@@ -1,14 +1,15 @@
 import React from 'react';
+import { Zap, StretchHorizontal, HeartPulse, Dumbbell, Scale, Smartphone, Check } from 'lucide-react';
 import './AJSDPSection.css';
 
 const AJSDPSection = () => {
   const fitnessParams = [
-    { icon: '🏃', label: 'Speed & Agility' },
-    { icon: '🤸', label: 'Flexibility & Mobility' },
-    { icon: '❤️', label: 'Cardiovascular Endurance' },
-    { icon: '💪', label: 'Muscular Strength' },
-    { icon: '⚖️', label: 'Coordination & Balance' },
-    { icon: '📱', label: 'Digital Tracking App', special: true },
+    { icon: <Zap size={28} strokeWidth={1.8} />, label: 'Speed & Agility' },
+    { icon: <StretchHorizontal size={28} strokeWidth={1.8} />, label: 'Flexibility & Mobility' },
+    { icon: <HeartPulse size={28} strokeWidth={1.8} />, label: 'Cardiovascular Endurance' },
+    { icon: <Dumbbell size={28} strokeWidth={1.8} />, label: 'Muscular Strength' },
+    { icon: <Scale size={28} strokeWidth={1.8} />, label: 'Coordination & Balance' },
+    { icon: <Smartphone size={28} strokeWidth={1.8} />, label: 'Digital Tracking App', special: true },
   ];
 
   const appFeatures = [
@@ -70,7 +71,7 @@ const AJSDPSection = () => {
           <div className="benefits-list">
             {benefits.map((benefit, index) => (
               <div key={index} className="benefit-item">
-                <span className="benefit-check">✓</span>
+                <span className="benefit-check"><Check size={16} strokeWidth={3} /></span>
                 <span className="benefit-text">{benefit}</span>
               </div>
             ))}

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Target, Telescope } from 'lucide-react';
 import './MissionVision.css';
 
 const MissionVision = () => {
@@ -15,7 +16,7 @@ const MissionVision = () => {
       <div className="mv-grid">
         <div className="mv-card">
           <div className="mv-card-label">
-            <div className="mv-card-icon">🎯</div>
+            <div className="mv-card-icon"><Target size={24} strokeWidth={1.8} /></div>
             Our Mission
           </div>
           <p>
@@ -29,7 +30,7 @@ const MissionVision = () => {
         </div>
         <div className="mv-card">
           <div className="mv-card-label">
-            <div className="mv-card-icon">🔭</div>
+            <div className="mv-card-icon"><Telescope size={24} strokeWidth={1.8} /></div>
             Our Vision
           </div>
           <p>

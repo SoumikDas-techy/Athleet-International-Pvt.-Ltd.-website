@@ -1,35 +1,36 @@
 import React from 'react';
+import { Building2, LayoutGrid, FlaskConical, Globe, GraduationCap, Lightbulb, ArrowRight } from 'lucide-react';
 import './ConsultingSection.css';
 
 const ConsultingSection = () => {
   const services = [
     {
-      icon: '🏗️',
+      icon: <Building2 size={32} strokeWidth={1.8} />,
       title: 'Infrastructure & Events',
       desc: 'Planning, designing, and managing world-class sports facilities and large-scale sporting events.',
     },
     {
-      icon: '📐',
+      icon: <LayoutGrid size={32} strokeWidth={1.8} />,
       title: 'Program Architecture',
       desc: 'Building scalable sports development frameworks for schools, clubs, and regional federations.',
     },
     {
-      icon: '🧬',
+      icon: <FlaskConical size={32} strokeWidth={1.8} />,
       title: 'Sports Science Advisory',
       desc: 'Integrating sports medicine, performance science, and data analytics into development programs.',
     },
     {
-      icon: '🌐',
+      icon: <Globe size={32} strokeWidth={1.8} />,
       title: 'Global Exposure & Partnerships',
       desc: 'Connecting organisations with international coaches, clubs, and exchange programs.',
     },
     {
-      icon: '🎓',
+      icon: <GraduationCap size={32} strokeWidth={1.8} />,
       title: 'Coach Education',
       desc: 'Certifying and upskilling coaches using global-standard methodologies and training protocols.',
     },
     {
-      icon: '💡',
+      icon: <Lightbulb size={32} strokeWidth={1.8} />,
       title: 'Sustainable Ecosystems',
       desc: 'Creating self-sustaining sports cultures with talent pipelines from grassroots to elite levels.',
     },
@@ -61,7 +62,7 @@ const ConsultingSection = () => {
           <div className="consulting-points">
             {consultingPoints.map((point, index) => (
               <div key={index} className="consulting-point">
-                <span className="consulting-arrow">→</span>
+                <span className="consulting-arrow"><ArrowRight size={18} strokeWidth={2.2} /></span>
                 <span className="consulting-text">{point}</span>
               </div>
             ))}

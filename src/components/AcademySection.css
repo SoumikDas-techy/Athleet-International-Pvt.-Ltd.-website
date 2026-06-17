@@ -159,4 +159,10 @@
   .academy-value-boxes {
     grid-template-columns: 1fr;
   }
+  .deliver-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+}
 }

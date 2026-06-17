@@ -106,4 +106,18 @@
   .model-bottom {
     grid-template-columns: repeat(2, 1fr);
   }
+  .model-bottom-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.model-bottom-card-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 }
