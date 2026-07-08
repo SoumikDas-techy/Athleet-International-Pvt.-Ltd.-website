@@ -53,7 +53,7 @@ const VerticalsOverview = () => {
       </div>
       <div className="verticals-grid">
         {verticals.map((vertical) => (
-          <div key={vertical.id} className="vertical-card">
+          <Link to={vertical.route} key={vertical.id} className="vertical-card">
             <div
               className="vertical-card-bg"
               style={{ backgroundImage: `url('${vertical.image}')` }}
@@ -63,11 +63,11 @@ const VerticalsOverview = () => {
               <span className="vertical-card-tag">{vertical.tag}</span>
               <h3 className="vertical-card-title">{vertical.title}</h3>
               <p className="vertical-card-desc">{vertical.desc}</p>
-              <Link to={vertical.route} className="vertical-card-link">
+              <span className="vertical-card-link">
                 {vertical.linkText}
-              </Link>
+              </span>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </section>

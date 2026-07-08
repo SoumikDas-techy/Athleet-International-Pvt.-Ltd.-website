@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './Header.css';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
@@ -12,11 +14,17 @@ const Header = () => {
     }
   };
 
-  const handleNavClick = (sectionId) => {
+  const handleNavClick = (e, sectionId) => {
+    e.preventDefault();
     setMenuOpen(false);
-    setTimeout(() => {
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        scrollToSection(sectionId);
+      }, 100);
+    } else {
       scrollToSection(sectionId);
-    }, 0);
+    }
   };
 
   const handleLinkClick = () => {
@@ -55,12 +63,12 @@ const Header = () => {
         <li><Link to="/academy" onClick={handleLinkClick}>Academy</Link></li>
         <li><Link to="/mcfs" onClick={handleLinkClick}>MCFS</Link></li>
         <li>
-          <a href="#consulting" onClick={() => handleNavClick('consulting')}>
+          <a href="#consulting" onClick={(e) => handleNavClick(e, 'consulting')}>
             Consulting
           </a>
         </li>
         <li>
-          <a href="#leadership" onClick={() => handleNavClick('leadership')}>
+          <a href="#leadership" onClick={(e) => handleNavClick(e, 'leadership')}>
             Leadership
           </a>
         </li>
@@ -69,7 +77,7 @@ const Header = () => {
       {/* CTA Button - unchanged */}
       <a
         href="#contact"
-        onClick={() => handleNavClick('contact')}
+        onClick={(e) => handleNavClick(e, 'contact')}
         className="nav-cta"
       >
         Contact Us
