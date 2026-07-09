@@ -1,6 +1,7 @@
 /* UKSC SECTION */
 .uksc-section {
   background: var(--off-white);
+  margin-top: 70px;
 }
 
 .uksc-grid {

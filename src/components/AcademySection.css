@@ -1,6 +1,7 @@
 /* ACADEMY */
 .academy-section {
   background: var(--navy);
+  margin-top: 70px;
 }
 
 .academy-grid {

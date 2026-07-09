@@ -1,6 +1,7 @@
 /* AJSDP */
 .ajsdp-section {
   background: var(--white);
+  margin-top: 70px;
 }
 
 .ajsdp-grid {
