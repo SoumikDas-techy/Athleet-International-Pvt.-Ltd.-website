@@ -1,13 +1,14 @@
 /* HERO */
 .hero {
-  height: 100vh;
-  min-height: 700px;
+  min-height: 100vh;
+  height: auto;
   position: relative;
   background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 40%, var(--blue) 100%);
   display: flex;
   align-items: center;
   overflow: hidden;
   margin-top: 70px;
+  padding: 60px 0;
 }
 
 .hero-bg {
@@ -166,5 +167,47 @@
 
   .hero-stats {
     gap: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    min-height: 0;
+    padding: 40px 0 48px;
+  }
+
+  .hero-athletes {
+    width: 100%;
+    opacity: 0.3;
+  }
+
+  .hero-diagonal {
+    opacity: 0.3;
+  }
+
+  .hero-content {
+    padding: 0 4%;
+  }
+
+  .hero-eyebrow {
+    font-size: 10px;
+    letter-spacing: 2px;
+    white-space: normal;
+    line-height: 1.5;
+  }
+
+  .hero-stats {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px 20px;
+  }
+
+  .hero-stat-item {
+    min-width: 0;
+  }
+
+  .hero-stat-num {
+    font-size: 28px;
   }
 }

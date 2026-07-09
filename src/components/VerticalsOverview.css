@@ -257,7 +257,6 @@
   opacity: 1;
   transform: translateY(18px) translateX(0) rotate(0deg) scale(1);
 }
-
 @media (max-width: 768px) {
   .zigzag-up,
   .zigzag-down {
@@ -273,6 +272,14 @@
   .swipe-right.is-visible {
     transform: translateY(0) translateX(0) rotate(0deg) scale(1);
   }
+
+  .vertical-card,
+  .vertical-card.is-visible,
+  .zigzag-up.is-visible,
+  .zigzag-down.is-visible {
+    animation: none !important;
+  }
+
   @keyframes float {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-6px); }
@@ -282,7 +289,6 @@
     50% { transform: translateY(6px); }
   }
 }
-
 /* ===== Idle floating motion once visible ===== */
 @keyframes float {
   0%, 100% { transform: translateY(-18px); }
