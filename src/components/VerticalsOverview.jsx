@@ -31,15 +31,6 @@ const VerticalsOverview = () => {
       route: '/ajsdp',
       linkText: 'Explore AJSDP',
     },
-    {
-      id: 'mcfs',
-      image: 'https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=800&q=80',
-      tag: 'Global Partnership',
-      title: 'Techno India Manchester City Football School',
-      desc: 'A premium football school bringing Manchester City\'s world-class methodology and licensed coaches to India\'s youth.',
-      route: '/mcfs',
-      linkText: 'Explore TIMCFS',
-    },
   ];
 
   const gridRef = useRef(null);
@@ -137,7 +128,7 @@ const VerticalsOverview = () => {
         <div className="section-tag">Our Verticals</div>
         <h2 className="section-title">What We Build</h2>
         <p className="section-desc">
-          Four powerful verticals forming one integrated sports development ecosystem.
+          Three powerful verticals forming one integrated sports development ecosystem.
         </p>
       </div>
       <div className="verticals-grid" ref={gridRef}>

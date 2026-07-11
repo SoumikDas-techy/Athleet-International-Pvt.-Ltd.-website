@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './Header.css';
+import logo from '../assets/logo.png';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -33,10 +34,10 @@ const Header = () => {
 
   return (
     <nav className="navbar">
-      {/* Logo - unchanged */}
+      {/* Logo */}
       <div className="nav-logo">
         <Link to="/" className="nav-logo-link" onClick={handleLinkClick}>
-          <div className="nav-logo-mark">A</div>
+          <img src={logo} alt="Logo" className="nav-logo-img" />
           <div className="nav-logo-text">
             Athleet International
             <span className="nav-logo-sub">Sports Pvt Ltd</span>
@@ -61,7 +62,6 @@ const Header = () => {
         <li><Link to="/uksc" onClick={handleLinkClick}>UKSC</Link></li>
         <li><Link to="/ajsdp" onClick={handleLinkClick}>AJSDP</Link></li>
         <li><Link to="/academy" onClick={handleLinkClick}>Academy</Link></li>
-        <li><Link to="/mcfs" onClick={handleLinkClick}>MCFS</Link></li>
         <li>
           <a href="#consulting" onClick={(e) => handleNavClick(e, 'consulting')}>
             Consulting

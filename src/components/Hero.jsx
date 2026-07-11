@@ -34,7 +34,7 @@ const Hero = () => {
         </div>
         <div className="hero-stats">
           <div className="hero-stat-item">
-            <div className="hero-stat-num">4+</div>
+            <div className="hero-stat-num">3+</div>
             <div className="hero-stat-label">Sports Verticals</div>
           </div>
           <div className="hero-stat-item">
@@ -44,10 +44,6 @@ const Hero = () => {
           <div className="hero-stat-item">
             <div className="hero-stat-num">4–18</div>
             <div className="hero-stat-label">Age Range</div>
-          </div>
-          <div className="hero-stat-item">
-            <div className="hero-stat-num">MCFC</div>
-            <div className="hero-stat-label">Global Partner</div>
           </div>
         </div>
       </div>

@@ -9,7 +9,6 @@ import VerticalsOverview from './components/VerticalsOverview'
 import UKSCSection from './components/UKSCSection'
 import AJSDPSection from './components/AJSDPSection'
 import AcademySection from './components/AcademySection'
-import MCFSSection from './components/MCFSSection'
 import ConsultingSection from './components/ConsultingSection'
 import LeadershipSection from './components/LeadershipSection'
 import ContactCTA from './components/ContactCTA'
@@ -19,7 +18,6 @@ import Footer from './components/Footer'
 import UKSCPage from './pages/UKSCPage'
 import AcademyPage from './pages/AcademyPage'
 import AJSDPPage from './pages/AJSDPPage'
-import MCFSPage from './pages/MCFSPage'
 
 function HomePage() {
   return (
@@ -46,7 +44,6 @@ function App() {
         <Route path="/uksc" element={<UKSCPage />} />
         <Route path="/academy" element={<AcademyPage />} />
         <Route path="/ajsdp" element={<AJSDPPage />} />
-        <Route path="/mcfs" element={<MCFSPage />} />
       </Routes>
     </Router>
   )

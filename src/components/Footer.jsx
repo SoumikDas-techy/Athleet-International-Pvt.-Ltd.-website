@@ -44,7 +44,6 @@ const Footer = () => {
         <Link to="/uksc">UKSC</Link>
         <Link to="/ajsdp">AJSDP</Link>
         <Link to="/academy">Academy</Link>
-        <Link to="/mcfs">MCFS</Link>
         <a href="#consulting" onClick={(e) => handleNavClick(e, 'consulting')}>Consulting</a>
         <a href="#contact" onClick={(e) => handleNavClick(e, 'contact')}>Contact</a>
       </div>
