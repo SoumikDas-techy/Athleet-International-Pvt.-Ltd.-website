@@ -23,7 +23,7 @@
   font-size: 28px;
   font-weight: 800;
   text-transform: uppercase;
-  color: var(--gold);
+  color: white;
   margin-bottom: 8px;
 }
 
@@ -82,7 +82,7 @@
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--white);
   margin-bottom: 12px;
 }
 
