@@ -43,6 +43,11 @@
   flex-shrink: 0;
 }
 
+.mv-card-icon svg {
+  color: var(--white) !important;
+  stroke: var(--white) !important;
+}
+
 .mv-card p {
   font-size: 16px;
   color: #5a6480;
@@ -78,9 +83,8 @@
     font-size: 80px;
   }
   .mv-card-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--gold);
-}
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
