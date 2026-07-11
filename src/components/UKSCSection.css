@@ -1,5 +1,8 @@
 /* UKSC SECTION */
-.uksc-section { background: var(--off-white); }
+.uksc-section {
+  background: var(--off-white);
+  margin-top: 70px;
+}
 .uksc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
 .uksc-badges { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 24px; }
 .uksc-badge {
@@ -32,6 +35,688 @@
 .key-signings { padding: 24px 28px; border-top: 1px solid var(--border); }
 .key-signings-label { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 12px; }
 
+/* REFACTORED RESPONSIVE STYLES */
+.uksc-intro-desc {
+  font-size: 16px;
+  color: #5A6480;
+  line-height: 1.8;
+  margin-bottom: 28px;
+}
+
+.uksc-sub-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--navy);
+  margin-bottom: 20px;
+}
+
+.uksc-fixtures-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.uksc-cards-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.uksc-fixture-card {
+  background: var(--off-white);
+  border-left: 4px solid var(--gold);
+  padding: 16px;
+  border-radius: 6px;
+}
+
+.uksc-fixture-tag {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.uksc-fixture-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+
+.uksc-fixture-details {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.uksc-result-card {
+  background: var(--off-white);
+  padding: 16px;
+  border-radius: 6px;
+}
+
+.uksc-result-card.victory {
+  border-left: 4px solid #4CAF50;
+}
+
+.uksc-result-card.draw {
+  border-left: 4px solid #FF9800;
+}
+
+.uksc-result-status {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.victory .uksc-result-status {
+  color: #4CAF50;
+}
+
+.draw .uksc-result-status {
+  color: #FF9800;
+}
+
+.uksc-result-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+
+.uksc-result-details {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.uksc-stats-grid {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.uksc-stat-card {
+  background: var(--navy);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  color: var(--white);
+  transition: transform 0.2s;
+}
+
+.uksc-stat-card:hover {
+  transform: translateY(-2px);
+}
+
+.uksc-stat-num {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--gold);
+  margin-bottom: 4px;
+}
+
+.uksc-stat-label {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.uksc-news-header {
+  margin-top: 80px;
+}
+
+.uksc-news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.uksc-news-card {
+  background: var(--white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(10,27,61,0.08);
+  transition: transform 0.2s;
+}
+
+.uksc-news-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(10,27,61,0.12);
+}
+
+.uksc-news-image {
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+}
+
+.bg-gradient-navy {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%);
+}
+
+.bg-gradient-gold {
+  background: linear-gradient(135deg, var(--blue-bright) 0%, var(--gold) 100%);
+}
+
+.bg-gradient-green {
+  background: linear-gradient(135deg, #4CAF50 0%, #8BC34A 100%);
+}
+
+.uksc-news-content {
+  padding: 24px;
+}
+
+.uksc-news-tag {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+}
+
+.uksc-news-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.uksc-news-desc {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.uksc-news-date {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.uksc-gallery-header {
+  margin-top: 80px;
+}
+
+.uksc-gallery-main-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.uksc-gallery-video-card {
+  grid-row: span 2;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%);
+  border-radius: 12px;
+  overflow: hidden;
+  min-height: 420px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-size: 80px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.uksc-gallery-video-card:hover,
+.uksc-gallery-card-gold:hover,
+.uksc-gallery-card-green:hover {
+  transform: translateY(-4px);
+}
+
+.uksc-gallery-card-gold {
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+  border-radius: 12px;
+  overflow: hidden;
+  min-height: 200px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--navy);
+  font-size: 48px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.uksc-gallery-card-green {
+  background: linear-gradient(135deg, #4CAF50 0%, #8BC34A 100%);
+  border-radius: 12px;
+  overflow: hidden;
+  min-height: 200px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-size: 48px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.uksc-gallery-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+}
+
+.uksc-gallery-overlay.small {
+  padding: 16px;
+}
+
+.uksc-gallery-tag {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.uksc-gallery-tag.text-gold {
+  color: var(--gold);
+}
+
+.uksc-gallery-tag.text-white-mute {
+  font-size: 12px;
+  color: rgba(255,255,255,0.7);
+}
+
+.uksc-gallery-title {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.uksc-gallery-title.text-white {
+  font-size: 14px;
+  color: var(--white);
+}
+
+.uksc-gallery-sub-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.uksc-gallery-sub-item {
+  border-radius: 10px;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.uksc-gallery-sub-item:hover {
+  transform: translateY(-4px);
+}
+
+.uksc-gallery-sub-item.bg-red { background: #FF6B6B; }
+.uksc-gallery-sub-item.bg-teal { background: #4ECDC4; }
+.uksc-gallery-sub-item.bg-blue { background: #45B7D1; }
+.uksc-gallery-sub-item.bg-orange { background: #FFA07A; }
+
+.uksc-honours-container {
+  background: var(--navy);
+  padding: 80px 5%;
+  color: var(--white);
+  margin: 80px -5% 0;
+}
+
+.uksc-honours-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.uksc-honours-card {
+  background: rgba(245,166,35,0.1);
+  border: 1px solid rgba(245,166,35,0.3);
+  border-radius: 12px;
+  padding: 32px;
+}
+
+.uksc-honours-card-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 12px;
+}
+
+.uksc-honours-card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.uksc-honours-card-list div {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.uksc-honours-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.uksc-honours-stat-card {
+  background: rgba(255,255,255,0.08);
+  border-radius: 10px;
+  padding: 24px;
+  text-align: center;
+  border-top: 3px solid var(--gold);
+}
+
+.uksc-honours-stat-num {
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--gold);
+  margin-bottom: 6px;
+}
+
+.uksc-honours-stat-label {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgba(255,255,255,0.7);
+}
+
+.uksc-team-header {
+  margin-top: 80px;
+}
+
+.uksc-team-category-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--navy);
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.uksc-players-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 60px;
+}
+
+.uksc-player-card {
+  background: var(--white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(10,27,61,0.06);
+  transition: transform 0.2s;
+}
+
+.uksc-player-card:hover {
+  transform: translateY(-4px);
+}
+
+.uksc-player-avatar-bg {
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+}
+
+.uksc-player-avatar-bg.bg-navy { background: var(--navy); }
+.uksc-player-avatar-bg.bg-blue { background: var(--blue); }
+.uksc-player-avatar-bg.bg-green { background: #4CAF50; }
+.uksc-player-avatar-bg.bg-orange { background: #FF9800; }
+
+.uksc-player-info {
+  padding: 16px;
+  text-align: center;
+}
+
+.uksc-player-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+
+.uksc-player-role {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.uksc-player-team-tag {
+  display: inline-block;
+  background: rgba(245,166,35,0.1);
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  font-size: 10px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-weight: 700;
+}
+
+.uksc-coaching-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.uksc-coaching-card {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 2px 12px rgba(10,27,61,0.06);
+  border-top: 4px solid var(--gold);
+  transition: transform 0.2s;
+}
+
+.uksc-coaching-card:hover {
+  transform: translateY(-4px);
+}
+
+.uksc-coaching-icon {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+
+.uksc-coaching-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+
+.uksc-coaching-desc {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.uksc-coaching-tag {
+  font-size: 12px;
+  color: var(--gold);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.uksc-management-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.uksc-management-card {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 12px rgba(10,27,61,0.06);
+  border-left: 4px solid var(--gold);
+  transition: transform 0.2s;
+}
+
+.uksc-management-card:hover {
+  transform: translateX(4px);
+}
+
+.uksc-management-flex {
+  display: flex;
+  gap: 16px;
+}
+
+.uksc-management-icon {
+  font-size: 48px;
+}
+
+.uksc-management-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.uksc-management-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+
+.uksc-management-desc {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.uksc-management-tag {
+  font-size: 12px;
+  color: var(--gold);
+  font-weight: 700;
+}
+
+/* MEDIA QUERIES FOR MULTIPLE DEVICES */
+@media (max-width: 1024px) {
+  .uksc-players-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 900px) {
-  .uksc-grid { grid-template-columns: 1fr; }
+  .uksc-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .uksc-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .uksc-news-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .uksc-honours-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .uksc-coaching-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .uksc-fixtures-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .uksc-gallery-main-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .uksc-gallery-video-card {
+    grid-row: auto;
+    min-height: 300px;
+    font-size: 60px;
+  }
+
+  .uksc-gallery-sub-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .uksc-honours-container {
+    padding: 60px 4%;
+    margin: 60px -4% 0;
+  }
+
+  .uksc-honours-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-bottom: 32px;
+  }
+
+  .uksc-management-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .uksc-news-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .uksc-coaching-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .uksc-intro-desc {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .uksc-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .uksc-gallery-sub-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .uksc-honours-card {
+    padding: 24px 20px;
+  }
+
+  .uksc-honours-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .uksc-players-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .uksc-management-flex {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
 }

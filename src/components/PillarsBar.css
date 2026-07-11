@@ -54,6 +54,12 @@
 @media (max-width: 1024px) {
   .pillars {
     grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+  .pillar-item {
+    border-right: none;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 8px;
   }
 }
 
@@ -64,5 +70,15 @@
 
   .pillar-label {
     font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pillars {
+    grid-template-columns: 1fr;
+    padding: 16px 4%;
+  }
+  .pillar-item {
+    padding: 14px 10px;
   }
 }

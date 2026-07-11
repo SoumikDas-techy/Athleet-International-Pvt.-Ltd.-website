@@ -209,16 +209,22 @@
     grid-template-columns: 1fr;
   }
   .fitness-param-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold);
+  }
+
+  .benefit-check {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold);
+  }
 }
 
-.benefit-check {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--gold);
-}
+@media (max-width: 480px) {
+  .fitness-params {
+    grid-template-columns: 1fr;
+  }
 }

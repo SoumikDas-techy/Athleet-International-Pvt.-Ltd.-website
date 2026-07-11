@@ -1,12 +1,41 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './Header.css';
 import logo from '../assets/logo.png';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('');
   const location = useLocation();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (location.pathname !== '/') {
+      setActiveSection('');
+      return;
+    }
+
+    const sections = ['home', 'about', 'consulting', 'leadership', 'contact'];
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + 120; // offset for navbar height + buffer
+
+      for (const section of sections) {
+        const el = document.getElementById(section);
+        if (el) {
+          const top = el.offsetTop;
+          const height = el.offsetHeight;
+          if (scrollPosition >= top && scrollPosition < top + height) {
+            setActiveSection(section);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Call initially
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [location.pathname]);
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
@@ -30,6 +59,20 @@ const Header = () => {
 
   const handleLinkClick = () => {
     setMenuOpen(false);
+  };
+
+  const isLinkActive = (path, sectionId) => {
+    if (path) {
+      return location.pathname === path;
+    }
+    if (sectionId) {
+      if (location.pathname !== '/') return false;
+      if (sectionId === 'about') {
+        return activeSection === 'home' || activeSection === 'about' || activeSection === '';
+      }
+      return activeSection === sectionId;
+    }
+    return false;
   };
 
   return (
@@ -58,17 +101,57 @@ const Header = () => {
 
       {/* Nav Links */}
       <ul className={`nav-links ${menuOpen ? 'active' : ''}`}>
-        <li><Link to="/" onClick={handleLinkClick}>About</Link></li>
-        <li><Link to="/uksc" onClick={handleLinkClick}>UKSC</Link></li>
-        <li><Link to="/ajsdp" onClick={handleLinkClick}>AJSDP</Link></li>
-        <li><Link to="/academy" onClick={handleLinkClick}>Academy</Link></li>
         <li>
-          <a href="#consulting" onClick={(e) => handleNavClick(e, 'consulting')}>
+          <Link
+            to="/"
+            className={isLinkActive('/', 'about') ? 'active' : ''}
+            onClick={handleLinkClick}
+          >
+            About
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="/uksc"
+            className={isLinkActive('/uksc') ? 'active' : ''}
+            onClick={handleLinkClick}
+          >
+            UKSC
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="/ajsdp"
+            className={isLinkActive('/ajsdp') ? 'active' : ''}
+            onClick={handleLinkClick}
+          >
+            AJSDP
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="/academy"
+            className={isLinkActive('/academy') ? 'active' : ''}
+            onClick={handleLinkClick}
+          >
+            Academy
+          </Link>
+        </li>
+        <li>
+          <a
+            href="#consulting"
+            className={isLinkActive(null, 'consulting') ? 'active' : ''}
+            onClick={(e) => handleNavClick(e, 'consulting')}
+          >
             Consulting
           </a>
         </li>
         <li>
-          <a href="#leadership" onClick={(e) => handleNavClick(e, 'leadership')}>
+          <a
+            href="#leadership"
+            className={isLinkActive(null, 'leadership') ? 'active' : ''}
+            onClick={(e) => handleNavClick(e, 'leadership')}
+          >
             Leadership
           </a>
         </li>

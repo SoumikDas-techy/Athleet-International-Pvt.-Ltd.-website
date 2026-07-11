@@ -83,3 +83,13 @@
     font-size: 18px;
   }
 }
+
+@media (max-width: 480px) {
+  .leaders-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .leader-card {
+    padding: 24px 16px;
+  }
+}

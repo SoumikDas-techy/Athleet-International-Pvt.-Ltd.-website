@@ -20,6 +20,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 70px;
 }
 
 body {
@@ -174,5 +175,53 @@ section {
   .cta-contact-grid {
     grid-template-columns: 1fr;
     max-width: 320px;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    padding: 48px 4%;
+  }
+  
+  .section-header {
+    margin-bottom: 32px;
+  }
+  
+  .section-desc {
+    font-size: 14.5px;
+    line-height: 1.6;
+    margin-top: 12px;
+  }
+
+  .pillars {
+    grid-template-columns: 1fr;
+  }
+
+  .leaders-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .model-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .model-bottom {
+    grid-template-columns: 1fr;
+  }
+
+  .delivers-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-actions .btn-primary,
+  .hero-actions .btn-outline {
+    width: 100%;
+    text-align: center;
+    padding: 12px 20px;
   }
 }

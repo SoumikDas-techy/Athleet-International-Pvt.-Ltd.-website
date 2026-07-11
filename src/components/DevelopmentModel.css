@@ -88,6 +88,15 @@
   .model-steps {
     grid-template-columns: repeat(3, 1fr);
   }
+  .model-step {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .model-step:nth-child(4),
+  .model-step:nth-child(5),
+  .model-step:nth-child(6) {
+    border-bottom: none;
+  }
 
   .model-bottom {
     grid-template-columns: repeat(3, 1fr);
@@ -98,6 +107,14 @@
   .model-steps {
     grid-template-columns: repeat(2, 1fr);
   }
+  .model-step {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .model-step:nth-child(5),
+  .model-step:nth-child(6) {
+    border-bottom: none;
+  }
 
   .step-num {
     font-size: 32px;
@@ -107,17 +124,38 @@
     grid-template-columns: repeat(2, 1fr);
   }
   .model-bottom-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--gold);
-  margin-right: 8px;
-  vertical-align: middle;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold);
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+
+  .model-bottom-card-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
-.model-bottom-card-title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+@media (max-width: 480px) {
+  .model-steps {
+    grid-template-columns: 1fr;
+  }
+  .model-step {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 24px 16px;
+  }
+  .model-step:last-child {
+    border-bottom: none;
+  }
+  .model-bottom {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .model-bottom-card {
+    padding: 16px;
+  }
 }
