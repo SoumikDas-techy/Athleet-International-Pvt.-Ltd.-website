@@ -39,12 +39,14 @@ function HomePage() {
 function App() {
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/uksc" element={<UKSCPage />} />
-        <Route path="/academy" element={<AcademyPage />} />
-        <Route path="/ajsdp" element={<AJSDPPage />} />
-      </Routes>
+      <div className="app-container">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/uksc" element={<UKSCPage />} />
+          <Route path="/academy" element={<AcademyPage />} />
+          <Route path="/ajsdp" element={<AJSDPPage />} />
+        </Routes>
+      </div>
     </Router>
   )
 }

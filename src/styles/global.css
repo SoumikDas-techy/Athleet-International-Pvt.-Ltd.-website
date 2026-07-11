@@ -21,6 +21,8 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 70px;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
@@ -28,6 +30,13 @@ body {
   background: var(--white);
   color: var(--navy);
   overflow-x: hidden;
+  width: 100%;
+}
+
+.app-container {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
 }
 
 /* BUTTONS */
@@ -77,6 +86,7 @@ body {
 /* SECTIONS */
 section {
   padding: 100px 5%;
+  overflow: hidden;
 }
 
 .section-header {
