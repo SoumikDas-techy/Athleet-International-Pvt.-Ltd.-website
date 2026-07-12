@@ -21,6 +21,7 @@ import {
   TrendingUp,
   Clock
 } from 'lucide-react';
+import logo from '../assets/uksc-logo.png';
 import './UKSCSection.css';
 
 const UKSCPage = () => {
@@ -29,6 +30,9 @@ const UKSCPage = () => {
       {/* INTRO / CLUB ROSTER */}
       <div className="section-header">
         <div className="section-tag">Vertical 01</div>
+        <div style={{ display: 'flex', justifyContent: 'center', margin: '24px 0 16px' }}>
+          <img src={logo} alt="United Kolkata Sports Club Logo" style={{ height: '140px', width: 'auto', objectFit: 'contain' }} />
+        </div>
         <h2 className="section-title">United Kolkata Sports Club</h2>
         <p className="section-desc">
           Established in 2024 under the vision of Techno India Group — building a modern, sustainable,
