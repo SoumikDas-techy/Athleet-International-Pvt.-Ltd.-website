@@ -1,4 +1,26 @@
 import React from 'react';
+import { 
+  Shield, 
+  Trophy, 
+  Sparkles, 
+  Award, 
+  Calendar, 
+  User, 
+  Users, 
+  Activity, 
+  Target, 
+  Newspaper, 
+  UserPlus, 
+  Megaphone, 
+  Play, 
+  Camera, 
+  Dumbbell, 
+  ClipboardList, 
+  Briefcase, 
+  Settings,
+  TrendingUp,
+  Clock
+} from 'lucide-react';
 import './UKSCSection.css';
 
 const UKSCPage = () => {
@@ -19,9 +41,13 @@ const UKSCPage = () => {
             <span className="uksc-badge">Men's Team</span>
             <span className="uksc-badge">Women's Team</span>
           </div>
-          <p className="uksc-established">🛡️ Established: 14th April 2024 &nbsp;|&nbsp; For The Youth, By The Youth</p>
+          <p className="uksc-established" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+            <Shield size={16} className="text-gold" /> Established: 14th April 2024 &nbsp;|&nbsp; For The Youth, By The Youth
+          </p>
           <p className="uksc-intro-desc">United Kolkata Sports Club was started to create a structured pathway for young footballers by connecting grassroots development, academy football, elite training, and professional opportunities under one ecosystem.</p>
-          <h3 className="uksc-sub-title">Achievements at a Glance</h3>
+          <h3 className="uksc-sub-title" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <Trophy size={20} style={{ color: 'var(--gold)' }} /> Achievements at a Glance
+          </h3>
           <div className="achievements-grid">
             <div className="achievement-item">
               <div className="achievement-team">Men's Team</div>
@@ -47,7 +73,9 @@ const UKSCPage = () => {
           </div>
           <div className="uksc-team-row">
             <div className="uksc-team-col">
-              <div className="uksc-team-label">✨ Men's Key Signings</div>
+              <div className="uksc-team-label" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                <Sparkles size={14} /> Men's Key Signings
+              </div>
               <span className="player-tag">Narayan Das</span>
               <span className="player-tag">Pragyan Gogoi</span>
               <span className="player-tag">Nongdamba Naorem</span>
@@ -56,7 +84,9 @@ const UKSCPage = () => {
               <span className="player-tag">Jiten Murmu</span>
             </div>
             <div className="uksc-team-col">
-              <div className="uksc-team-label">✨ Women's Key Signings</div>
+              <div className="uksc-team-label" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                <Sparkles size={14} /> Women's Key Signings
+              </div>
               <span className="player-tag">Nitu Linda</span>
               <span className="player-tag">Anita Kumari</span>
               <span className="player-tag">Kai Rumi</span>
@@ -66,7 +96,9 @@ const UKSCPage = () => {
             </div>
           </div>
           <div className="key-signings">
-            <div className="key-signings-label">🦁 Impact on Bengal Football</div>
+            <div className="key-signings-label" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+              <TrendingUp size={14} /> Impact on Bengal Football
+            </div>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
               <span className="player-tag" style={{ borderColor: 'rgba(245,166,35,0.4)', color: 'var(--gold)' }}>Strengthening professional ecosystem</span>
               <span className="player-tag" style={{ borderColor: 'rgba(245,166,35,0.4)', color: 'var(--gold)' }}>Pathways for local talent</span>
@@ -85,42 +117,64 @@ const UKSCPage = () => {
       </div>
       <div className="uksc-fixtures-grid">
         <div>
-          <h3 className="uksc-sub-title">🗓️ Upcoming Fixtures</h3>
+          <h3 className="uksc-sub-title" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <Calendar size={20} style={{ color: 'var(--gold)' }} /> Upcoming Fixtures
+          </h3>
           <div className="uksc-cards-stack">
             <div className="uksc-fixture-card">
               <div className="uksc-fixture-tag">CFL 1st Division</div>
               <div className="uksc-fixture-title">UKSC vs FC Goa</div>
-              <div className="uksc-fixture-details">🗓️ February 15, 2025 &nbsp;| &nbsp;⏰ 6:00 PM IST</div>
+              <div className="uksc-fixture-details" style={{ display: 'flex', alignItems: 'center', gap: '6px', flexWrap: 'wrap' }}>
+                <Calendar size={13} /> February 15, 2025 &nbsp;|&nbsp; <Clock size={13} /> 6:00 PM IST
+              </div>
             </div>
             <div className="uksc-fixture-card">
               <div className="uksc-fixture-tag">State Football Championship</div>
               <div className="uksc-fixture-title">UKSC Women vs Punjab FC Women</div>
-              <div className="uksc-fixture-details">🗓️ February 18, 2025 &nbsp;| &nbsp;⏰ 4:30 PM IST</div>
+              <div className="uksc-fixture-details" style={{ display: 'flex', alignItems: 'center', gap: '6px', flexWrap: 'wrap' }}>
+                <Calendar size={13} /> February 18, 2025 &nbsp;|&nbsp; <Clock size={13} /> 4:30 PM IST
+              </div>
             </div>
             <div className="uksc-fixture-card">
               <div className="uksc-fixture-tag">Futsal Cup</div>
               <div className="uksc-fixture-title">UKSC Futsal vs Mumbai Futsal Club</div>
-              <div className="uksc-fixture-details">🗓️ February 22, 2025 &nbsp;| &nbsp;⏰ 7:00 PM IST</div>
+              <div className="uksc-fixture-details" style={{ display: 'flex', alignItems: 'center', gap: '6px', flexWrap: 'wrap' }}>
+                <Calendar size={13} /> February 22, 2025 &nbsp;|&nbsp; <Clock size={13} /> 7:00 PM IST
+              </div>
             </div>
           </div>
         </div>
         <div>
-          <h3 className="uksc-sub-title">🏆 Recent Results</h3>
+          <h3 className="uksc-sub-title" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <Trophy size={20} style={{ color: 'var(--gold)' }} /> Recent Results
+          </h3>
           <div className="uksc-cards-stack">
             <div className="uksc-result-card victory">
-              <div className="uksc-result-status">🎉 Victory</div>
+              <div className="uksc-result-status" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                <Award size={14} /> Victory
+              </div>
               <div className="uksc-result-title">UKSC 3 - 1 Mohan Bagan</div>
-              <div className="uksc-result-details">🗓️ February 8, 2025 &nbsp;| &nbsp;CFL 1st Division</div>
+              <div className="uksc-result-details" style={{ display: 'flex', alignItems: 'center', gap: '6px', flexWrap: 'wrap' }}>
+                <Calendar size={13} /> February 8, 2025 &nbsp;|&nbsp; CFL 1st Division
+              </div>
             </div>
             <div className="uksc-result-card victory">
-              <div className="uksc-result-status">🎉 Victory</div>
+              <div className="uksc-result-status" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                <Award size={14} /> Victory
+              </div>
               <div className="uksc-result-title">UKSC Women 2 - 0 Bengal Women</div>
-              <div className="uksc-result-details">🗓️ February 1, 2025 &nbsp;| &nbsp;Kanyashree Premier</div>
+              <div className="uksc-result-details" style={{ display: 'flex', alignItems: 'center', gap: '6px', flexWrap: 'wrap' }}>
+                <Calendar size={13} /> February 1, 2025 &nbsp;|&nbsp; Kanyashree Premier
+              </div>
             </div>
             <div className="uksc-result-card draw">
-              <div className="uksc-result-status">🤝 Draw</div>
+              <div className="uksc-result-status" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                <Users size={14} /> Draw
+              </div>
               <div className="uksc-result-title">UKSC Futsal 2 - 2 Delhi United</div>
-              <div className="uksc-result-details">🗓️ January 28, 2025 &nbsp;| &nbsp;IFA Futsal League</div>
+              <div className="uksc-result-details" style={{ display: 'flex', alignItems: 'center', gap: '6px', flexWrap: 'wrap' }}>
+                <Calendar size={13} /> January 28, 2025 &nbsp;|&nbsp; IFA Futsal League
+              </div>
             </div>
           </div>
         </div>
@@ -128,19 +182,27 @@ const UKSCPage = () => {
       <div className="uksc-stats-grid">
         <div className="uksc-stat-card">
           <div className="uksc-stat-num">12</div>
-          <div className="uksc-stat-label">🏟️ Matches Played</div>
+          <div className="uksc-stat-label" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px' }}>
+            <Activity size={14} /> Matches Played
+          </div>
         </div>
         <div className="uksc-stat-card">
           <div className="uksc-stat-num">8</div>
-          <div className="uksc-stat-label">🏆 Wins</div>
+          <div className="uksc-stat-label" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px' }}>
+            <Trophy size={14} /> Wins
+          </div>
         </div>
         <div className="uksc-stat-card">
           <div className="uksc-stat-num">28</div>
-          <div className="uksc-stat-label">🥅 Goals Scored</div>
+          <div className="uksc-stat-label" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px' }}>
+            <Target size={14} /> Goals Scored
+          </div>
         </div>
         <div className="uksc-stat-card">
           <div className="uksc-stat-num">24 pts</div>
-          <div className="uksc-stat-label">👑 Standing</div>
+          <div className="uksc-stat-label" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px' }}>
+            <Award size={14} /> Standing
+          </div>
         </div>
       </div>
 
@@ -152,30 +214,43 @@ const UKSCPage = () => {
       </div>
       <div className="uksc-news-grid">
         <div className="uksc-news-card">
-          <div className="uksc-news-image bg-gradient-navy">⚽</div>
+          <div className="uksc-news-image" style={{ backgroundColor: 'var(--navy)' }}>
+            <Newspaper size={48} strokeWidth={1.5} style={{ color: 'var(--gold)' }} />
+          </div>
           <div className="uksc-news-content">
             <div className="uksc-news-tag">Match Report</div>
             <h4 className="uksc-news-title">UKSC Defeats Mohan Bagan in Thrilling Encounter</h4>
             <p className="uksc-news-desc">A brilliant display of attacking football saw UKSC secure a vital 3-1 victory over Mohan Bagan in the CFL 1st Division.</p>
-            <div className="uksc-news-date">🗓️ Feb 8, 2025</div>
+            <div className="uksc-news-date" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+              <Calendar size={13} /> Feb 8, 2025
+            </div>
           </div>
         </div>
+
         <div className="uksc-news-card">
-          <div className="uksc-news-image bg-gradient-gold">✍️</div>
+          <div className="uksc-news-image" style={{ backgroundColor: 'var(--navy)' }}>
+            <UserPlus size={48} strokeWidth={1.5} style={{ color: 'var(--gold)' }} />
+          </div>
           <div className="uksc-news-content">
             <div className="uksc-news-tag">Transfer News</div>
             <h4 className="uksc-news-title">Two International Players Join UKSC</h4>
             <p className="uksc-news-desc">UKSC announces the signing of two experienced international players to strengthen the squad for the upcoming season.</p>
-            <div className="uksc-news-date">🗓️ Feb 5, 2025</div>
+            <div className="uksc-news-date" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+              <Calendar size={13} /> Feb 5, 2025
+            </div>
           </div>
         </div>
         <div className="uksc-news-card">
-          <div className="uksc-news-image bg-gradient-green">📣</div>
+          <div className="uksc-news-image" style={{ backgroundColor: 'var(--navy)' }}>
+            <Megaphone size={48} strokeWidth={1.5} style={{ color: 'var(--gold)' }} />
+          </div>
           <div className="uksc-news-content">
             <div className="uksc-news-tag">Announcement</div>
             <h4 className="uksc-news-title">Women's Team Achieves Championship Status</h4>
             <p className="uksc-news-desc">UKSC Women's team crowned champions of Kanyashree Premier B with an impressive unbeaten campaign.</p>
-            <div className="uksc-news-date">🗓️ Feb 1, 2025</div>
+            <div className="uksc-news-date" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+              <Calendar size={13} /> Feb 1, 2025
+            </div>
           </div>
         </div>
       </div>
@@ -188,32 +263,26 @@ const UKSCPage = () => {
       </div>
       <div className="uksc-gallery-main-grid">
         <div className="uksc-gallery-video-card">
-          ▶️
+          <Play size={48} fill="var(--white)" stroke="none" />
           <div className="uksc-gallery-overlay">
             <div className="uksc-gallery-tag text-gold">FEATURED VIDEO</div>
             <div className="uksc-gallery-title">UKSC vs Mohan Bagan - Match Highlights</div>
           </div>
         </div>
         <div className="uksc-gallery-card-gold">
-          📷
+          <Camera size={40} color="var(--navy)" />
           <div className="uksc-gallery-overlay small">
             <div className="uksc-gallery-tag text-white-mute">MATCH GALLERY</div>
             <div className="uksc-gallery-title text-white">87 Photos</div>
           </div>
         </div>
         <div className="uksc-gallery-card-green">
-          💪
+          <Dumbbell size={40} color="var(--white)" />
           <div className="uksc-gallery-overlay small">
             <div className="uksc-gallery-tag text-white-mute">TRAINING SESSIONS</div>
             <div className="uksc-gallery-title text-white">52 Videos</div>
           </div>
         </div>
-      </div>
-      <div className="uksc-gallery-sub-grid">
-        <div className="uksc-gallery-sub-item bg-red">🎞️</div>
-        <div className="uksc-gallery-sub-item bg-teal">🖼️</div>
-        <div className="uksc-gallery-sub-item bg-blue">👟</div>
-        <div className="uksc-gallery-sub-item bg-orange">🏋️</div>
       </div>
 
       {/* CLUB HONOURS & ACHIEVEMENTS */}
@@ -225,7 +294,9 @@ const UKSCPage = () => {
         </div>
         <div className="uksc-honours-grid">
           <div className="uksc-honours-card">
-            <div className="uksc-honours-card-title">👑 Championship Titles</div>
+            <div className="uksc-honours-card-title" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+              <Trophy size={16} /> Championship Titles
+            </div>
             <div className="uksc-honours-card-list">
               <div>CFL 1st Division Champions (2024–25)</div>
               <div>Kanyashree Premier B Champions (2024–25)</div>
@@ -233,7 +304,9 @@ const UKSCPage = () => {
             </div>
           </div>
           <div className="uksc-honours-card">
-            <div className="uksc-honours-card-title">🎖️ Notable Achievements</div>
+            <div className="uksc-honours-card-title" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+              <Award size={16} /> Notable Achievements
+            </div>
             <div className="uksc-honours-card-list">
               <div>IFA Futsal League Runners-up (2024–25)</div>
               <div>State Football Championship Runners-up (2024)</div>
@@ -244,19 +317,27 @@ const UKSCPage = () => {
         <div className="uksc-honours-stats">
           <div className="uksc-honours-stat-card">
             <div className="uksc-honours-stat-num">6</div>
-            <div className="uksc-honours-stat-label">🏆 Trophies Won</div>
+            <div className="uksc-honours-stat-label" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px' }}>
+              <Trophy size={14} /> Trophies Won
+            </div>
           </div>
           <div className="uksc-honours-stat-card">
             <div className="uksc-honours-stat-num">50+</div>
-            <div className="uksc-honours-stat-label">🏟️ Matches Played</div>
+            <div className="uksc-honours-stat-label" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px' }}>
+              <Activity size={14} /> Matches Played
+            </div>
           </div>
           <div className="uksc-honours-stat-card">
             <div className="uksc-honours-stat-num">150+</div>
-            <div className="uksc-honours-stat-label">🥅 Goals Scored</div>
+            <div className="uksc-honours-stat-label" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px' }}>
+              <Target size={14} /> Goals Scored
+            </div>
           </div>
           <div className="uksc-honours-stat-card">
             <div className="uksc-honours-stat-num">2</div>
-            <div className="uksc-honours-stat-label">⏳ Seasons Active</div>
+            <div className="uksc-honours-stat-label" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px' }}>
+              <Calendar size={14} /> Seasons Active
+            </div>
           </div>
         </div>
       </div>
@@ -268,10 +349,14 @@ const UKSCPage = () => {
         <p className="section-desc">Get to know the talented players, coaching staff, and management leading UKSC.</p>
       </div>
 
-      <h3 className="uksc-team-category-title">🏃 Squad Roster</h3>
+      <h3 className="uksc-team-category-title" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
+        <Users size={22} className="text-navy" /> Squad Roster
+      </h3>
       <div className="uksc-players-grid">
         <div className="uksc-player-card">
-          <div className="uksc-player-avatar-bg bg-navy">🏃‍♂️</div>
+          <div className="uksc-player-avatar-bg bg-navy">
+            <User size={48} color="var(--white)" />
+          </div>
           <div className="uksc-player-info">
             <div className="uksc-player-name">Narayan Das</div>
             <div className="uksc-player-role">Forward</div>
@@ -279,7 +364,9 @@ const UKSCPage = () => {
           </div>
         </div>
         <div className="uksc-player-card">
-          <div className="uksc-player-avatar-bg bg-blue">🏃‍♂️</div>
+          <div className="uksc-player-avatar-bg bg-blue">
+            <User size={48} color="var(--white)" />
+          </div>
           <div className="uksc-player-info">
             <div className="uksc-player-name">Pragyan Gogoi</div>
             <div className="uksc-player-role">Midfielder</div>
@@ -287,7 +374,9 @@ const UKSCPage = () => {
           </div>
         </div>
         <div className="uksc-player-card">
-          <div className="uksc-player-avatar-bg bg-green">🏃‍♀️</div>
+          <div className="uksc-player-avatar-bg bg-green">
+            <User size={48} color="var(--white)" />
+          </div>
           <div className="uksc-player-info">
             <div className="uksc-player-name">Nitu Linda</div>
             <div className="uksc-player-role">Forward</div>
@@ -295,7 +384,9 @@ const UKSCPage = () => {
           </div>
         </div>
         <div className="uksc-player-card">
-          <div className="uksc-player-avatar-bg bg-orange">🏃‍♂️</div>
+          <div className="uksc-player-avatar-bg bg-orange">
+            <User size={48} color="var(--white)" />
+          </div>
           <div className="uksc-player-info">
             <div className="uksc-player-name">Vinil Poojary</div>
             <div className="uksc-player-role">Defender</div>
@@ -304,33 +395,45 @@ const UKSCPage = () => {
         </div>
       </div>
 
-      <h3 className="uksc-team-category-title">🧠 Coaching Staff</h3>
+      <h3 className="uksc-team-category-title" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
+        <Award size={22} className="text-navy" /> Coaching Staff
+      </h3>
       <div className="uksc-coaching-grid">
         <div className="uksc-coaching-card">
-          <div className="uksc-coaching-icon">📋</div>
+          <div className="uksc-coaching-icon" style={{ display: 'flex', justifyContent: 'center', marginBottom: '12px' }}>
+            <ClipboardList size={48} color="var(--gold)" />
+          </div>
           <div className="uksc-coaching-title">Head Coach - Men's Team</div>
           <div className="uksc-coaching-desc">International Coaching Experience</div>
           <div className="uksc-coaching-tag">20+ Years in Football</div>
         </div>
         <div className="uksc-coaching-card">
-          <div className="uksc-coaching-icon">🧢</div>
+          <div className="uksc-coaching-icon" style={{ display: 'flex', justifyContent: 'center', marginBottom: '12px' }}>
+            <Sparkles size={48} color="var(--gold)" />
+          </div>
           <div className="uksc-coaching-title">Head Coach - Women's Team</div>
           <div className="uksc-coaching-desc">Former Professional Player</div>
           <div className="uksc-coaching-tag">15+ Years Experience</div>
         </div>
         <div className="uksc-coaching-card">
-          <div className="uksc-coaching-icon">🧬</div>
+          <div className="uksc-coaching-icon" style={{ display: 'flex', justifyContent: 'center', marginBottom: '12px' }}>
+            <Activity size={48} color="var(--gold)" />
+          </div>
           <div className="uksc-coaching-title">Fitness & Sports Science</div>
           <div className="uksc-coaching-desc">Certified Strength Coach</div>
           <div className="uksc-coaching-tag">Specialized Training</div>
         </div>
       </div>
 
-      <h3 className="uksc-team-category-title">💼 Club Management</h3>
+      <h3 className="uksc-team-category-title" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
+        <Briefcase size={22} className="text-navy" /> Club Management
+      </h3>
       <div className="uksc-management-grid">
         <div className="uksc-management-card">
           <div className="uksc-management-flex">
-            <div className="uksc-management-icon">👑</div>
+            <div className="uksc-management-icon">
+              <Award size={48} color="var(--gold)" />
+            </div>
             <div className="uksc-management-info">
               <div className="uksc-management-title">Club Director</div>
               <div className="uksc-management-desc">Strategic Leadership & Administration</div>
@@ -340,7 +443,9 @@ const UKSCPage = () => {
         </div>
         <div className="uksc-management-card">
           <div className="uksc-management-flex">
-            <div className="uksc-management-icon">⚙️</div>
+            <div className="uksc-management-icon">
+              <Settings size={48} color="var(--gold)" />
+            </div>
             <div className="uksc-management-info">
               <div className="uksc-management-title">Football Operations Manager</div>
               <div className="uksc-management-desc">Match Management & Team Coordination</div>
